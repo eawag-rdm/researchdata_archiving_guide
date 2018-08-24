@@ -360,8 +360,8 @@ use (and download) a part of the data.
   [open source license](https://opensource.org/licenses). For question
   regarding software licensing, get in touch with [rdm@eawag.ch](mailto:rdm@eawag.ch).
         
-      Another case might be third-part data, which has a different license
-      and/or which requires a separate citation.
+  Another case might be third-part data, which has a different license
+  and/or which requires a separate citation.
 
 + A large chunk of the data is of a different type than the rest. For
 example a sub-folder containing just images. Also, if a folder already
