@@ -237,8 +237,7 @@ separated by underscores ( '_' ). Here is a sophisticated naming
 convention example from the
 [CMIP5 Model Output Requirements](https://pcmdi.llnl.gov/mips/cmip5/CMIP5_output_metadata_requirements.pdf):
 
-    filename = <variable name>_<MIP table>_<model>_<experiment>_
-    <ensemble member>[_<temporal subset>].nc
+    filename = <variable name>_<MIP table>_<model>_<experiment>_<ensemble member>[_<temporal subset>].nc
 
 All components of the filename are either part of a controlled
 vocabulary or have a precisely defined format by themselves. Make sure
@@ -286,16 +285,16 @@ Frequently, research data is organized in a hierarchical folder structure, for e
   	|      - site_A.jpg
 	|      - ...
 	- code
-	|    |
-	|    - python
-	|    |      |
-	|    |      - setup.py
-	|    |      - extractor.py
-	|    |      - ...
-    |    - C
-	|      |
-	|      - campsci.h
-	|      - logmod_campsci.c
+	     |
+	     - python
+	     |      |
+	     |      - setup.py
+	     |      - extractor.py
+	     |      - ...
+         - C
+	       |
+	       - campsci.h
+	       - logmod_campsci.c
 	
 
 In ERIC (as in most other repository solutions), such a hierarchical
@@ -316,7 +315,7 @@ root of the directory-tree is `data`:
 `zip -r data.zip data`, or   
 `tar -zcvf data.tgz data`
 
-**Always upload the README and, if applicable the manuscript, separately.**
+**Always upload the README and, if applicable, the manuscript separately.**
 
 **Make sure that there are no spurious, often hidden, files in the
   archive**, which are sometimes added automatically by certain
@@ -364,7 +363,7 @@ specific file extensions, e.g.
 
 For **really large datasets containing large numbers of large files**
 that arise for example in genomics, we provide a command line tool,
-"`resup`", to automate packaging, splitting into reasonably sized
+`resup`, to automate packaging, splitting into reasonably sized
 chunks, uploading, and doing everything in reverse for downloading:
 
 [https://github.com/eawag-rdm/resup](https://github.com/eawag-rdm/resup)
@@ -426,7 +425,7 @@ and `docx` instead, if you have to work with such software.
 
 + If you want to use MS Excel for data entry and display, please read
   the excellent short article
-  [*Data organization in spreadsheets* (2017)](https://doi.org/10.1080/00031305.2017.1375989)
+  [*Data organization in spreadsheets* (2017)](https://opendata.eawag.ch/static/Data_organization_in_spreadsheets.pdf)
   by Broman and Wu.
 
 + Some research groups use MS Excel as a versatile research tool that
@@ -461,7 +460,7 @@ containing the lake under *Spatial Extent*. The exact coordinates
 should be part of the dataset proper, in a table that is uploaded as a
 *resource*.
  
-+ **The title for a *publication data package* ** is of the form "Data for: [title_of_the_paper]"
++ **The title for a *publication data package*** is of the form "Data for: [title_of_the_paper]"
 
 + Make sure that *Curator* and the *Usage Contact* have email addresses.
 
