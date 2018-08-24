@@ -1,3 +1,18 @@
+# Disclaimer
+
+This is a hands-on guide for researchers who want to prepare their
+research data for depositing it in an archive or repository.
+
+It also contains practical advice regarding day-to-day data-management
+best practices.
+
+While framed as guide for Eawag, it should be useful for a wide range
+of scientists.
+
+This is a draft. Feedback (as
+[Issue](https://github.com/eawag-rdm/researchdata_archiving_guide/issues)
+or via [email](mailto:rdm@eawag.ch)) is greatly appreciated.
+
 # Guidelines for the preparation of research data packages
 
 This is guide should help to organize and annotate research data to
