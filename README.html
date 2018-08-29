@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--
+==============================================================================
+           "GitHub HTML5 Pandoc Template" v2.1 — by Tristano Ajmone           
+==============================================================================
+Copyright © Tristano Ajmone, 2017, MIT License (MIT). Project's home:
+
+- https://github.com/tajmone/pandoc-goodies
+
+The CSS in this template reuses source code taken from the following projects:
+
+- GitHub Markdown CSS: Copyright © Sindre Sorhus, MIT License (MIT):
+  https://github.com/sindresorhus/github-markdown-css
+
+- Primer CSS: Copyright © 2016-2017 GitHub Inc., MIT License (MIT):
+  http://primercss.io/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The MIT License 
+
+Copyright (c) Tristano Ajmone, 2017 (github.com/tajmone/pandoc-goodies)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) 2017 GitHub Inc.
+
+"GitHub Pandoc HTML5 Template" is Copyright (c) Tristano Ajmone, 2017, released
+under the MIT License (MIT); it contains readaptations of substantial portions
+of the following third party softwares:
+
+(1) "GitHub Markdown CSS", Copyright (c) Sindre Sorhus, MIT License (MIT).
+(2) "Primer CSS", Copyright (c) 2016 GitHub Inc., MIT License (MIT).
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+==============================================================================-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Harald von Waldow" />
+  <title>Publishing and archiving research data</title>
+  <style type="text/css">
+.markdown-body{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;color:#24292e;font-family:-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";font-size:16px;line-height:1.5;word-wrap:break-word;box-sizing:border-box;min-width:200px;max-width:980px;margin:0 auto;padding:45px}.markdown-body a{color:#0366d6;background-color:transparent;text-decoration:none;-webkit-text-decoration-skip:objects}.markdown-body a:active,.markdown-body a:hover{outline-width:0}.markdown-body a:hover{text-decoration:underline}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body strong{font-weight:600}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1{font-size:2em;margin:.67em 0;padding-bottom:.3em;border-bottom:1px solid #eaecef}.markdown-body h2{padding-bottom:.3em;font-size:1.5em;border-bottom:1px solid #eaecef}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#6a737d}.markdown-body img{border-style:none}.markdown-body svg:not(:root){overflow:hidden}.markdown-body hr{box-sizing:content-box;height:.25em;margin:24px 0;padding:0;overflow:hidden;background-color:#e1e4e8;border:0}.markdown-body hr::before{display:table;content:""}.markdown-body hr::after{display:table;clear:both;content:""}.markdown-body input{margin:0;overflow:visible;font:inherit;font-family:inherit;font-size:inherit;line-height:inherit}.markdown-body [type=checkbox]{box-sizing:border-box;padding:0}.markdown-body *{box-sizing:border-box}.markdown-body blockquote{margin:0}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol ol,.markdown-body ul ol{list-style-type:lower-roman}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body ol ol ol,.markdown-body ol ul ol,.markdown-body ul ol ol,.markdown-body ul ul ol{list-style-type:lower-alpha}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dd{margin-left:0}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body code{font-family:SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace}.markdown-body pre{font:12px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;word-wrap:normal}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body table{display:block;width:100%;overflow:auto;border-spacing:0;border-collapse:collapse}.markdown-body table th{font-weight:600}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #dfe2e5}.markdown-body table tr{background-color:#fff;border-top:1px solid #c6cbd1}.markdown-body table tr:nth-child(2n){background-color:#f6f8fa}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body code{padding:.2em 0;margin:0;font-size:85%;background-color:rgba(27,31,35,.05);border-radius:3px}.markdown-body code::after,.markdown-body code::before{letter-spacing:-.2em;content:"\00a0"}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:0 0;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}.markdown-body pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code::after,.markdown-body pre code::before{content:normal}.markdown-body .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}.markdown-body kbd{box-shadow:inset 0 -1px 0 #959da5;display:inline-block;padding:3px 5px;font:11px/10px SFMono-Regular,Consolas,"Liberation Mono",Menlo,Courier,monospace;color:#444d56;vertical-align:middle;background-color:#fcfcfc;border:1px solid #c6cbd1;border-bottom-color:#959da5;border-radius:3px;box-shadow:inset 0 -1px 0 #959da5}.markdown-body :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}.markdown-body .task-list-item{list-style-type:none}.markdown-body .task-list-item+.task-list-item{margin-top:3px}.markdown-body .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}.markdown-body::before{display:table;content:""}.markdown-body::after{display:table;clear:both;content:""}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.Alert,.Error,.Note,.Success,.Warning{padding:11px;margin-bottom:24px;border-style:solid;border-width:1px;border-radius:4px}.Alert p,.Error p,.Note p,.Success p,.Warning p{margin-top:0}.Alert p:last-child,.Error p:last-child,.Note p:last-child,.Success p:last-child,.Warning p:last-child{margin-bottom:0}.Alert{color:#246;background-color:#e2eef9;border-color:#bac6d3}.Warning{color:#4c4a42;background-color:#fff9ea;border-color:#dfd8c2}.Error{color:#911;background-color:#fcdede;border-color:#d2b2b2}.Success{color:#22662c;background-color:#e2f9e5;border-color:#bad3be}.Note{color:#2f363d;background-color:#f6f8fa;border-color:#d5d8da}.Alert h1,.Alert h2,.Alert h3,.Alert h4,.Alert h5,.Alert h6{color:#246;margin-bottom:0}.Warning h1,.Warning h2,.Warning h3,.Warning h4,.Warning h5,.Warning h6{color:#4c4a42;margin-bottom:0}.Error h1,.Error h2,.Error h3,.Error h4,.Error h5,.Error h6{color:#911;margin-bottom:0}.Success h1,.Success h2,.Success h3,.Success h4,.Success h5,.Success h6{color:#22662c;margin-bottom:0}.Note h1,.Note h2,.Note h3,.Note h4,.Note h5,.Note h6{color:#2f363d;margin-bottom:0}.Alert h1:first-child,.Alert h2:first-child,.Alert h3:first-child,.Alert h4:first-child,.Alert h5:first-child,.Alert h6:first-child,.Error h1:first-child,.Error h2:first-child,.Error h3:first-child,.Error h4:first-child,.Error h5:first-child,.Error h6:first-child,.Note h1:first-child,.Note h2:first-child,.Note h3:first-child,.Note h4:first-child,.Note h5:first-child,.Note h6:first-child,.Success h1:first-child,.Success h2:first-child,.Success h3:first-child,.Success h4:first-child,.Success h5:first-child,.Success h6:first-child,.Warning h1:first-child,.Warning h2:first-child,.Warning h3:first-child,.Warning h4:first-child,.Warning h5:first-child,.Warning h6:first-child{margin-top:0}h1.title,p.subtitle{text-align:center}h1.title.followed-by-subtitle{margin-bottom:0}p.subtitle{font-size:1.5em;font-weight:600;line-height:1.25;margin-top:0;margin-bottom:16px;padding-bottom:.3em}div.line-block{white-space:pre-line}
+  </style>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<article class="markdown-body">
+<header>
+<h1 class="title followed-by-subtitle">Publishing and archiving of research data</h1>
+<p class="subtitle">an <a href="https://eawag.ch">Eawag</a>-flavored hands-on guide (v1.0)</p>
+<p class="author">Harald von Waldow &lt;rdm@eawag.ch&gt;</p>
+<p class="date">2018-08-28</p>
+<div class="summary">
+<p>This is a hands-on guide for researchers who want to prepare their research data for depositing it in an archive or repository. It also contains practical advice regarding day-to-day data-management best practices. While framed as guide for Eawag, it should be useful for a wide range of scientists.</p>
+<p>© <a href="https://eawag.ch">Eawag</a>, 2018, <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a></p>
+<div class="Alert">
+<p>Feedback (as <a href="https://github.com/eawag-rdm/researchdata_archiving_guide/issues">GitHub-Issue</a> or via <a href="mailto:rdm@eawag.ch">email</a>) is greatly appreciated.</p>
+</div>
+</div>
+</header>
+<hr>
+<nav id="TOC">
+<h1 class="toc-title">Contents</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#scope-of-research-data">Scope of <em>research data</em></a><ul>
+<li><a href="#primary-data">Primary data</a></li>
+<li><a href="#derived-data">Derived data</a></li>
+<li><a href="#third-party-data">Third party data</a></li>
+<li><a href="#source-code">Source code</a></li>
+<li><a href="#ancillary-information">Ancillary information</a></li>
+</ul></li>
+<li><a href="#when-to-prepare-a-research-data-package">When to prepare a <em>research data package</em>?</a></li>
+<li><a href="#documentation-scientific-metadata">Documentation (“<em>scientific metadata</em>”)</a></li>
+<li><a href="#file-naming">File naming</a><ul>
+<li><a href="#general-rules">General rules</a></li>
+<li><a href="#file-naming-schemes">File naming schemes</a></li>
+</ul></li>
+<li><a href="#folder-structure-and-file-archives">Folder structure and file-archives</a><ul>
+<li><a href="#spitting-into-multiple-archive-files">Spitting into multiple <em>archive files</em></a></li>
+</ul></li>
+<li><a href="#file-formats">File formats</a><ul>
+<li><a href="#rules-of-thumb">Rules of thumb</a></li>
+<li><a href="#more-detailed-recommendations">More detailed recommendations</a></li>
+<li><a href="#ms-office-the-elephant-in-the-room">MS Office: The elephant in the room</a></li>
+<li><a href="#open-document-formats-odf">Open Document Formats (ODF)</a></li>
+</ul></li>
+<li><a href="#bibliographic-metadata">Bibliographic metadata</a></li>
+</ul>
+</nav>
+<hr>
+<h2 id="introduction">Introduction</h2>
+<p>This is guide should help to organize and annotate research data to make it suitable for the deposition in the Eawag Research Data Institutional Archive (<a href="https://data.eawag.ch">ERIC</a>, only internal) or other repositories.</p>
+<p>Since a good research data package is most efficiently created from data that has been well managed throughout the research process, we also provide some relevant advice for good data management practices well before the final package for archiving is prepared. As a side-effect, considering these guidelines might therefore also improve the efficiency of your work.</p>
+<p>The guide is under constant development. We very much appreciate feedback of any kind (gaps, inconsistencies, suggested additions, etc.) to <a href="mailto:rdm@eawag.ch">rdm@eawag.ch</a>.</p>
+<h2 id="scope-of-research-data">Scope of <em>research data</em></h2>
+<p>The term <em>research data</em> here refers not only to numerical datasets proper, but to all kinds of information that can be used to reproduce, validate, or re-use scientific a work. If that work is the subject of a published article or report, we used the term <em>publication data package</em> to refer to the data associated with the publication.</p>
+<h3 id="primary-data">Primary data</h3>
+<p>Strictly speaking, <em>primary data</em> is data that is the direct, unmodified result of observations, measurements, surveys, etc. In practice however, a modified form of that raw data, e.g. through format conversions or the discarding of irrelevant data, is frequently considered <em>primary data</em>. As a rule of thumb, <em>primary data</em> is data for which there exists no previous incarnation that cannot be deleted. The researcher, considering conventions in her or his field, defines what exactly to archive as <em>primary data</em>.</p>
+<div class="Warning">
+<p><strong>Archiving primary data is of the essence.</strong></p>
+</div>
+<h3 id="derived-data">Derived data</h3>
+<p>In addition to the <em>primary data</em>, you should include as a minimum for a <em>publication data package</em> all datasets necessary to reproduce the figures, tables and individual numbers in the running text that are presented in the main paper and the Supporting Information.</p>
+<p>Consider including more. Providing additionally data from intermediate steps in the chain of analysis and related but not crucial data for the publication in question will make your data package more useful and increase your work’s credibility and exposure.</p>
+<h3 id="third-party-data">Third party data</h3>
+<p>Third party data is data that was used for the research but was not gathered within the frame of the respective research project. It is important to properly document the provenance of this data and be aware whether there are restrictions to publish it outside (or even inside) Eawag. In case there are legal problems regarding the archiving and/or publishing of such data, please contact <a href="mailto:rdm@eawag.ch">rdm@eawag.ch</a>.</p>
+<h3 id="source-code">Source code</h3>
+<p>Computer code is often a critical part of the research and necessary to validate or reproduce the work. You should include any code along with relevant information about dependencies, the platform(s) it runs on, required interpreters, compilers, libraries and the versions used. Take care to provide a reasonable degree of user documentation for your software.</p>
+<h4 id="version-control-systems">Version control systems</h4>
+<p>It is good practice to use source code versioning systems such as <a href="https://git-scm.com/">Git</a> and often a copy of the code is kept on a collaboration platform such as <a href="https://gitlab.com/users/sign_in">gitlab.com</a> or <a href="https://github.com">github.com</a>. <mark>Do not just refer to such a platform when archiving your code</mark>, as they do not qualify as “archives” and might disappear tomorrow. Instead, create a <code>zip</code>- or <code>tar</code>-archive from the version of the source code used in your work and add it to the package.</p>
+<h4 id="reproducible-computing">Reproducible computing</h4>
+<p>Taken seriously, providing the software infrastructure for other researchers to reliably run your code in the future can be very difficult for non-trivial codebases and no generally applicable recommendations currently exist. Most proposals involve virtual machines (VMs) or container technologies such as <a href="https://linuxcontainers.org/">LXC/LXD</a>, Docker, <a href="https://coreos.com/rkt/">rkt</a> or <a href="https://www.sylabs.io/">Singularity</a>. <a href="https://www.reprozip.org">ReproZip</a> is a promising tool to collect the dependencies of your code into a container- or VM-format. If you are facing that challenge, please get in touch with <a href="rdm@eawag.ch" class="uri">rdm@eawag.ch</a>.</p>
+<h4 id="third-party-code">Third party code</h4>
+<p>should be included in the data package if you can’t refer to a copy of exactly the version you used, which is available from a reliable, well-established repository committed to long-term preservation. For example, you don’t have to archive R version 3.4.4 - the <a href="https://cran.r-project.org/index.html">The Comprehensive R Archive Network</a> will <a href="https://cran.r-project.org/src/base/R-3/">do that</a> most reliably for you. However, if you used <a href="https://github.com/C2SM/gevXgpd">this R package for extreme value analysis</a>, which seems to be only available from a single GitHub repository, by all means archive it yourself.</p>
+<h4 id="proprietary-software">Proprietary software</h4>
+<p>These recommendations might not be workable in full if you used proprietary third party software, libraries, languages or tool-chains. <mark>Aim at using exclusively open source software for scientific work</mark>, since proprietary tools diminish the credibility, reproducibility and long-term value of your research.</p>
+<h3 id="ancillary-information">Ancillary information</h3>
+<p>Generously add any files and information that could further help to understand your work or build on your results. This includes for example photos and figures of a related publication and its Supporting Information , maps, pointers to related resources such as the project website, etc.</p>
+<h2 id="when-to-prepare-a-research-data-package">When to prepare a <em>research data package</em>?</h2>
+<p><strong>Throughout the project</strong>, keep your research data continuously reasonably organized from the start. Experienced researchers usually do that already. If you come back after three weeks of holidays and you only need to read your own documentation to know what is where and what it means, you are OK. If you organize your data in a <a href="#folder-structure-and-file-archives">directory hierarchy</a> and/or employ a <a href="#file-naming">file naming convention</a>, put some effort into documenting theses structures from the start. Liberally re-factor as your project develops and these conventions and structures don’t match anymore.</p>
+<p><strong>Primary data</strong> should be archived as soon as possible so safeguard against data-loss and because ancillary information about the measurements, observations, data gathering is still readily available.</p>
+<p><strong>Publication data packages</strong>, that is data tied to a specific article or report, is ideally submitted once the article is accepted. This makes it unlikely that the data change in the future and at the same time the researcher likely still has the details of the work readily available.</p>
+<p><strong>Leaving researchers</strong> should be reminded early to prepare and archive their research data. Depending on the sophistication of previous data organization, preparation and annotation might take much longer than expected.</p>
+<h2 id="documentation-scientific-metadata">Documentation (“<em>scientific metadata</em>”)</h2>
+<p>The data in the package needs to be annotated to be useful for other researchers or your future self. Each package should contain a README - file, that describes the package at the highest level.</p>
+<ul>
+<li><p>The README file is a pure ASCII or UTF-8 text-file (README.txt) or is written in a common markup-language such as <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> (README.md), or HTML (README.html).</p></li>
+<li><p>The README file has to reference, implicitly or explicitly, each other file in the package and thus can be used to look up purpose and description of each element of the dataset.</p></li>
+<li><p>The README file describes the dataset structure, that is the organization in a <a href="#folder-structure-and-file-archives">folder-hierarchy</a> (if there is one) and the <a href="#file-naming">file-naming</a> convention used, if applicable.</p></li>
+<li><p>If the package contains files of a non-common format, the README should mention that and point to required software to read them.</p></li>
+<li><p>The README should contain all information necessary to interpret and understand the dataset that is not recorded elsewhere, e.g. meaning of column headers, abbreviations, units of variables, etc.</p></li>
+<li><p>The README should contain pointers to other files in the package that contain scientific metadata.</p></li>
+<li><p>The README should contain a copy of text in the <em>Abstract</em> of the <a href="#bibliographic-metadata">bibliographic metadata</a>.</p></li>
+<li><p>The README should contain a copy of the text in the <em>Citation</em> field of the <a href="#bibliographic-metadata">bibliographic metadata</a>.</p></li>
+<li><p>The README should contain a reference to the associated article or report (as a <a href="https://www.doi.org/">DOI</a> if possible), if applicable.</p></li>
+</ul>
+<p>Depending on the size an complexity of the data package, it might be useful to describe parts of it in lower-level README-files, perhaps located in sub-directories.</p>
+<div class="Note">
+<p><strong>Note</strong>: This list is likely incomplete. Your guidance should be the imagined situation of a researcher who was not involved in the project and who should be able to completely understand and make use of the package without having to contact you.</p>
+</div>
+<p>In the case of a <em>publication data package</em>, the publication proper (article, report) usually contains indispensable scientific metadata. Please include a PDF of the final publication, the accepted version, the submitted version or a draft manuscript, in that order of preference. If your publication is already registered in Lib4RI’s <a href="https://dora.lib4ri.ch/eawag">DORA</a>, or if it can be accessed through a <a href="https://www.doi.org/">DOI</a>, it is sufficient to include the respective URL as a resource of the package, e.g.<br />
+<a href="https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080" class="uri">https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080</a> or<br />
+<a href="https://doi.org/10.1177/2053019617740365" class="uri">https://doi.org/10.1177/2053019617740365</a></p>
+<h2 id="file-naming">File naming</h2>
+<h3 id="general-rules">General rules</h3>
+<p>File- and directory-names should adhere to the following conventions to ensure interoperability across platforms and filesystems and not be a pain to process programmatically:</p>
+<ul>
+<li>Limit the file name to 32 characters (preferably less!).</li>
+<li>Do not use spaces in filenames! Use an underscore ( <code>_</code> ) as substitute.</li>
+<li>Do not distinguish files by capitalization but keep it all lowercase.</li>
+<li>Use only alphanumeric characters, minus ( <code>-</code> ), and underscore ( <code>_</code> ),<br />
+don’t use special characters <code>&amp;</code> <code>,</code> <code>*</code> <code>%</code> <code>#</code> <code>;</code> <code>*</code> <code>(</code> <code>)</code> <code>!</code> <code>@</code> <code>$</code> <code>^</code> <code>~</code> <code>'</code> <code>{</code> <code>}</code> <code>[</code> <code>]</code> <code>?</code> <code>&lt;</code> <code>&gt;</code>.</li>
+<li>Use only one period and use it before the file extension.</li>
+<li><strong>Dates</strong> in filenames (and pretty much everywhere else) must have one of two formats:
+<ol type="1">
+<li>YYYY-MM-DD</li>
+<li>YYYYMMDD</li>
+</ol></li>
+<li><strong>Numbers</strong> as part of filenames should be left padded with zeros, for example:<br />
+<code>site01_logger001.csv</code> … <code>site12_logger328.csv</code></li>
+</ul>
+<h3 id="file-naming-schemes">File naming schemes</h3>
+<p>If a file naming scheme is employed, it should be descriptive and consistent. Encode attributes of a file as alphanumeric strings separated by underscores ( <code>_</code> ). Here is a sophisticated naming convention example from the <a href="https://pcmdi.llnl.gov/mips/cmip5/CMIP5_output_metadata_requirements.pdf">CMIP5 Model Output Requirements</a>:</p>
+<pre><code>filename = &lt;variable name&gt;_&lt;MIP table&gt;_&lt;model&gt;_&lt;experiment&gt;_&lt;ensemble member&gt;[_&lt;temporal subset&gt;].nc</code></pre>
+<p>All components of the filename are either part of a controlled vocabulary or have a precisely defined format by themselves. Make sure to sensibly define and clearly document the format of the components of the filenames. This results for example in this filename:</p>
+<pre><code>tas_Amon_HADCM3_ historical_r1i1p1_185001-200512.nc</code></pre>
+<div class="Warning">
+<p>If mapping your content to such a convention and directory-structure becomes too complex, you should consider to <mark>employ a proper database</mark>. In particular, if you feel you spend too much effort in your analysis code to construct the paths for the data files, you are in the process of implementing a primitive database software by yourself and should step back and reconsider.</p>
+</div>
+<h2 id="folder-structure-and-file-archives">Folder structure and file-archives</h2>
+<p>Frequently, research data is organized in a hierarchical folder structure, for example:</p>
+<pre><code>|
+- README.md
+- manuscript.pdf
+- data
+|    |
+|    - raw
+|    |   |
+|    |   - loggerA.csv
+|    |   - loggerB.csv
+|    - analyzed_1
+|    |          |
+|    |          - discharge.csv
+|    |          - ...
+|    - analyzed_2
+|    |          |
+|    |          - hydrographs.csv
+|    |          - ...
+|    - final
+|          |
+|          - table1.csv
+|          - figure1.csv
+|          - ...
+- images
+|      |
+|      - site_A.jpg
+|      - ...
+- code
+     |
+     - python
+     |      |
+     |      - setup.py
+     |      - extractor.py
+     |      - ...
+     - C
+       |
+       - campsci.h
+       - logmod_campsci.c</code></pre>
+<p>In ERIC (as in most other repository solutions), such a hierarchical structure cannot be represented directly. The content of a <em>data package</em> are <em>resources</em>. A <em>resource</em> is either a file or a URL. There is only one “level” for all resources. The recommended way to deal with this situation is to create one or several <strong><em>archive file(s)</em></strong> which contain individual files along with the the directory-hierarchy and will re-create the latter when unpacked.</p>
+<p>The most common type of an <em>archive file</em> is a <strong>zip</strong> archive. Other common formats are <strong>tar</strong> and <strong>7z</strong>.</p>
+<p>In the simplest case, just create a (compressed) <em>archive file</em> of one full directory tree, and upload the resulting <em>archive file</em>, e.g, if the root of the directory-tree is <code>data</code>:</p>
+<p><code>zip -r data.zip data</code>, or<br />
+<code>tar -zcvf data.tgz data</code></p>
+<div class="Warning">
+<p><strong>Always upload the README and, if applicable, the manuscript separately.</strong></p>
+</div>
+<div class="Warning">
+<p><strong>Make sure that there are no spurious, often hidden, files in the archive</strong>, which are sometimes added automatically by certain operating systems, such as files named <code>.DS_Store</code> or <code>__MACOSX</code>.</p>
+</div>
+<h3 id="spitting-into-multiple-archive-files">Spitting into multiple <em>archive files</em></h3>
+<p>It might be prudent to split the directory-tree into multiple <em>archive files</em>. In general, reasons to do that are related to</p>
+<ol type="a">
+<li>the size of the data,</li>
+<li>the applicability of the resource-related <a href="#bibliographic-metadata">bibliographic metadata</a>, in particular the fields <em>Resource Type</em>, <em>License</em>, and <em>Citation</em>, and</li>
+<li>parts of the data that should not be compressed.</li>
+</ol>
+<p><strong>Examples are:</strong></p>
+<ul>
+<li><p>One <em>archive file</em> would be too large and users might want to just use (and download) a part of the data.</p></li>
+<li><p>Part of the archive should be made available under a specific license (and can’t be published in the public domain, as is the default for ERIC). This can for example apply to software, which often hast to be published under the <a href="https://www.gnu.org/licenses/licenses.html">GNU Public License</a>, or for which reasons exist to retain copyright using another <a href="https://opensource.org/licenses">open source license</a>. For question regarding software licensing, get in touch with <a href="mailto:rdm@eawag.ch">rdm@eawag.ch</a>.</p>
+<p>Another case might be third-part data, which has a different license and/or which requires a separate citation.</p></li>
+<li><p>A large chunk of the data is of a different type than the rest. For example a sub-folder containing just images. Also, if a folder already contains mostly compressed data, e.g. just <code>JPG</code> and/or <code>PNG</code> files, it is advisable to create a non-compressed <em>archive file</em> from it, by either using <code>tar</code> without the <code>-z</code> option or <code>zip</code> with the option <code>-0</code>.</p></li>
+</ul>
+<div class="Note">
+<p><strong>Note:</strong> <code>zip</code> allows to switch off compression selectively for specific file extensions, e.g.<br />
+<code>zip -rn .tiff:.gif:.jpg data.zip data</code><br />
+will not compress the image files with the given extensions.</p>
+</div>
+<div class="Success">
+<p>For <strong>really large datasets containing large numbers of large files</strong> that arise for example in genomics, we provide a command line tool, <strong><code>resup</code></strong>, to automate packaging, splitting into reasonably sized chunks, reliable uploading, and doing everything in reverse for downloading: <a href="https://github.com/eawag-rdm/resup" class="uri">https://github.com/eawag-rdm/resup</a>.</p>
+</div>
+<h2 id="file-formats">File formats</h2>
+<p>Try to use reliable, well-documented and universally readable file-formats. Because of the extremely large and constantly growing number of file formats, no conclusive lists of acceptable formats can be given.</p>
+<h3 id="rules-of-thumb">Rules of thumb</h3>
+<ul>
+<li><p>Avoid proprietary formats (prefer standardized ones)</p></li>
+<li><p>Prefer formats that can be read by multiple software packages, which exist for multiple platforms.</p></li>
+<li><p>Prefer common formats over rarely used formats.</p></li>
+<li><p>Avoid pseudo-standards, such as <code>xlsx</code> and <code>docx</code>, which you can recognize by the fact that there do not exist multiple implementations across different applications and platforms.</p></li>
+<li><p>Anything “plain text” that is not pure ASCII should be UTF-8 encoded.</p></li>
+<li><p>Simpler is better (as long as no info is lost).</p></li>
+<li><p>If your original data comes in a “low-quality” format (e.g. MP3, GIF, …) just keep it like that, a conversion will not improve the quality.</p></li>
+</ul>
+<h3 id="more-detailed-recommendations">More detailed recommendations</h3>
+<p>The <a href="http://www.loc.gov/preservation/resources/rfs/TOC.html">Library of Congress Recommended Formats Statement</a> is an excellent starting point. Also, feel free to get in touch with <a href="rdm@eawag.ch" class="uri">rdm@eawag.ch</a> for help.</p>
+<h3 id="ms-office-the-elephant-in-the-room">MS Office: The elephant in the room</h3>
+<p>Microsoft Office formats pose a particularly tedious problem because they are so prevalent but flaky and volatile at the same time.</p>
+<ul>
+<li><p>Never use the “Office 97-2003 formats” <code>doc</code> and <code>xls</code>. Use <code>xlsx</code> and <code>docx</code> instead, if you have to work with such software.</p></li>
+<li><p>Microsoft Word documents and Powerpoint presentations can always be exported as PDF. Please do that and provide the <code>docx</code> or <code>pptx</code> document additionally, if you want to make it easy for users of your data to edit it.</p></li>
+<li><p><mark>Always prefer plain <code>csv</code> to <code>xlsx</code>.</mark></p></li>
+<li><p>However, Saving as <code>csv</code> from Microsoft Excel is very unreliable and the result might not represent what you intended. Double-check!</p></li>
+</ul>
+<div class="Success">
+<p>To more reliably and comfortably export Workbooks even containing multiple Worksheets, we provide the tool <strong><code>xlsxtocsv</code></strong>:<br />
+<a href="https://github.com/eawag-rdm/xlsxtocsv" class="uri">https://github.com/eawag-rdm/xlsxtocsv</a><br />
+Double-check anyway!</p>
+</div>
+<ul>
+<li><p>If you want to use MS Excel for data entry and display, please <mark>read the excellent short article <a href="https://opendata.eawag.ch/static/Data_organization_in_spreadsheets.pdf"><em>Data organization in spreadsheets</em></a> by Broman and Wu (2017)</mark>.</p></li>
+<li><p>Some research groups use MS Excel as a versatile research tool that integrates data storage (in tables), presentation (through layouting- and content-embedding features), analysis software (VB macros, statistical functions and graphing). In case your results come in the form of such a sophisticated Excel Workbook, give up with regard to archiving your work reproducibly, reliably for the long term. It is just not possible. Provide the xlsx-file as is and hope for the best.</p></li>
+</ul>
+<div class="Alert">
+<p><strong>Note:</strong> It is generally a good idea to <mark>avoid spreadsheet software</mark>, in in particular Microsoft Excel, in scientific work. The recently well publicized corruption of ~20% of papers with supplementary Excel gene lists due to Excel - autoconversion (<a href="https://doi.org/10.1186/s13059-016-1044-7">Ziemann et al., 2016</a>) is just the tip of the iceberg. Other issues are, but not limited to</p>
+<ul>
+<li><p>30 year old date type bugs that today interact with cell formatting under different language settings in unpreictable ways and differently in different versions of Excel (start with <a href="https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/%5D">Joel Spolsky’s entertaining anecdote</a>).</p></li>
+<li><p>well documented bugs in statistical functions, random number generation and numerical algorithms, e.g. “unacceptably bad” statistical functions (<a href="https://doi.org/10.1016/j.csda.2008.03.005">Yalta, 2008</a>) (<a href="https://sci-hub.tw/10.1016/j.csda.2008.03.005">alt. source</a>), “it is not safe to assume that Microsoft Excel’s statistical procedures give the correct answer” and “It is clear that when Microsoft claims to have “fixed” a procedure that is known to be in error, Microsoft’s claim cannot be safely believed&quot; (<a href="https://doi.org/10.1016/j.csda.2008.03.004">McCullough and Heise, 2008</a>) (<a href="http://users.df.uba.ar/mricci/F1ByG2013/excel2007.pdf">alt. source</a>), (<a href="https://sci-hub.tw//10.1016/j.csda.2008.03.004">alt. source</a>), “the fact that Microsoft is still marketing a product that contains known errors, some of them going back to Excel 4, released in 1994” (<a href="http://homepages.ulb.ac.be/~gmelard/rech/compsstat37.pdf">Mélard, 2014</a>), (<a href="https://doi.org/10.1007/s00180-014-0482-5">alt. source</a>), (<a href="http://sci-hub.tw/10.1007/s00180-014-0482-5">alt. source</a>).</p></li>
+<li><p>The initially comfortable mixing of data storage, data presentation, and analysis code into one inextricable and obscure bundle that apparently is the root cause for a <a href="http://www.eusprig.org/horror-stories.htm">large number of consequential mishaps involving Excel</a> collected by the <a href="http://www.eusprig.org/">The European Spreadsheet Risks Interest Group</a>.</p></li>
+</ul>
+</div>
+<h3 id="open-document-formats-odf">Open Document Formats (ODF)</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/OpenDocument">Open Document Formats (ODF)</a>, e.g. <code>odf</code>, <code>ods</code>, <code>odt</code>, are slightly better because they follow a real standard. However, they are still very complex and adoption is low. Therefore we advise to use them only if you can’t use the simpler alternatives (i.e. <code>csv</code> for tabular data and <strong>and if the software that was employed to create the documents in question uses ODF as its default file format (e.g. <a href="https://www.libreoffice.org/">LibreOffice</a>) </strong>.</p>
+<div class="Warning">
+<p><mark>Do not save to ODF formats from Microsoft Office!</mark> MS Office’s implementation of ODF is flawed and you might end up with files that are even less usable than the corresponding MS Office formats.</p>
+</div>
+<h2 id="bibliographic-metadata">Bibliographic metadata</h2>
+<p><em>Bibliographic metadata</em> is the data attached to the whole package and to individual ressources and is visible directly in the web-interface of ERIC. In case you make your data available to the general public as <em>Open Data</em>, this metadata will be transmitted to various public directories, search services and registries. In other words, it is metadata that is not contained with a <em>resource</em> (a file). This data includes fields such as <em>Title</em>, <em>Author(s)</em>, <em>Keywords</em>, <em>Curator</em>, <em>Spatial Extent</em>, …</p>
+<ul>
+<li><p>ERIC provides <strong>online guidance</strong> for this metadata. Keep in mind that this metadata record mainly serves to make your data <strong>findable</strong>, e.g. as a source of keywords for search engines and as information to catalog your dataset in third-party directories. Therefore, scientific precision is less important than usefulness to someone who might not even know what exactly he or she is searching for. If, for example, you deployed sensors at 50 different locations across Lake Geneva, just provide a bounding box containing the lake under <em>Spatial Extent</em>. The exact coordinates should be part of the dataset proper, in a table that is uploaded as a <em>resource</em>.</p></li>
+<li><p><strong>The title for a <em>publication data package</em></strong> is of the form “Data for: [title_of_the_paper]”</p></li>
+<li><p>Make sure that <em>Curator</em> and the <em>Usage Contact</em> have email addresses.</p></li>
+</ul>
+</article>
+</body>
+</html>
