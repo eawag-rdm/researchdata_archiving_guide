@@ -1,4 +1,4 @@
-# Publishing and archiving of research data:\nAn [Eawag](https://eawag.ch)-flavored hands-on guide (v1.0)
+# Publishing and archiving of research data: An [Eawag](https://eawag.ch)-flavored hands-on guide (v1.0)
 
 [https://doi.org/10.25678/000066](https://doi.org/10.25678/000066)
 
