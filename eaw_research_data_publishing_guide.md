@@ -507,7 +507,7 @@ just the tip of the iceberg. Other issues are, but not limited to
 under different language settings in unpreictable ways and differently
 in different versions of Excel (start with [Joel Spolsky's
 entertaining
-anecdote](https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/])).
+anecdote](https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/)).
 
 + well documented bugs in statistical functions, random number
 generation and numerical algorithms, e.g.  "unacceptably bad"
