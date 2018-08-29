@@ -1,30 +1,52 @@
-# Disclaimer
+---
+title: Publishing and archiving of research data
+subtitle: an [Eawag](https://eawag.ch)-flavored hands-on guide (v1.0)
+author: Harald von Waldow &lt;rdm@eawag.ch&gt;
+date: 2018-08-28
+lang: en
+toc-title: Contents
+# ============================= HTML META/HEADER ==============================
+# These variables are destined to the meta elements in the html head block.
+# Use them when you want to show author, date, etc., only in meta elements, or
+# you want different values to be displayed in the document and its metadata.
+# If these are not set, their equivalent vars (above) will be used instead.
+# -----------------------------------------------------------------------------
+pagetitle: Publishing and archiving research data
+author-meta: Harald von Waldow
+date-meta: 
+# =============================== SUMMARY TEXT ================================
+# If defined, the contents of `$summary$` key will be displayed right before TOC.
+# -----------------------------------------------------------------------------
+summary: |
+	This is a hands-on guide for researchers who want to prepare their
+	research data for depositing it in an archive or repository.
+	It also contains practical advice regarding day-to-day data-management
+	best practices.
+	While framed as guide for Eawag, it should be useful for a wide range
+	of scientists.
 
-This is a hands-on guide for researchers who want to prepare their
-research data for depositing it in an archive or repository.
+	© [Eawag](https://eawag.ch), 2018, [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/)
 
-It also contains practical advice regarding day-to-day data-management
-best practices.
+    :::::::: Alert ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    Feedback (as [GitHub-Issue](https://github.com/eawag-rdm/researchdata_archiving_guide/issues)
+    or via [email](mailto:rdm@eawag.ch)) is greatly appreciated.
+    :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+    
+...
 
-While framed as guide for Eawag, it should be useful for a wide range
-of scientists.
-
-This is a draft. Feedback (as
-[Issue](https://github.com/eawag-rdm/researchdata_archiving_guide/issues)
-or via [email](mailto:rdm@eawag.ch)) is greatly appreciated.
-
-# Guidelines for the preparation of research data packages
+## Introduction
 
 This is guide should help to organize and annotate research data to
 make it suitable for the deposition in the Eawag Research Data
-Institutional Archive ([ERIC](https://data.eawag.ch), only internal).
+Institutional Archive ([ERIC](https://data.eawag.ch), only internal)
+or other repositories.
 
 Since a good research data package is most efficiently created from
 data that has been well managed throughout the research process, we
-provide some relevant advice for good data management practices well
-before the final package for archiving is prepared. As a side-effect,
-considering these guidelines might therefore also improve the
-efficiency of your work.
+also provide some relevant advice for good data management practices
+well before the final package for archiving is prepared. As a
+side-effect, considering these guidelines might therefore also improve
+the efficiency of your work.
 
 The guide is under constant development. We very much appreciate
 feedback of any kind (gaps, inconsistencies, suggested additions, etc.)
@@ -34,18 +56,24 @@ to [rdm@eawag.ch](mailto:rdm@eawag.ch).
 
 The term *research data* here refers not only to numerical datasets
 proper, but to all kinds of information that can be used to reproduce,
-validate, or re-use scientific a work.
+validate, or re-use scientific a work. If that work is the subject of
+a published article or report, we used the term *publication data
+package* to refer to the data associated with the publication.
 
 ### Primary data
 
-Stricty speaking, *primary data* is data that is the direct,
+Strictly speaking, *primary data* is data that is the direct,
 unmodified result of observations, measurements, surveys, etc. In
-practice however, a modified form of that raw data, e.g. through format
-conversions or the discarding of irrelevant data, is considered
-*primary data*. As a rule of thumb, *primary data* is data for which
-there exists no previous incarnation that cannot be deleted. The
-researcher defines what exactly to archive as *primary
-data*. **Archiving primary data is of the essence.**
+practice however, a modified form of that raw data, e.g. through
+format conversions or the discarding of irrelevant data, is frequently
+considered *primary data*. As a rule of thumb, *primary data* is data
+for which there exists no previous incarnation that cannot be
+deleted. The researcher, considering conventions in her or his field,
+defines what exactly to archive as *primary data*.
+
+:::::::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+**Archiving primary data is of the essence.**
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ### Derived data
 
@@ -66,7 +94,7 @@ gathered within the frame of the respective research project. It is
 important to properly document the provenance of this data and be
 aware whether there are restrictions to publish it outside (or even
 inside) Eawag. In case there are legal problems regarding the
-archiving of such data, please contact
+archiving and/or publishing of such data, please contact
 [rdm@eawag.ch](mailto:rdm@eawag.ch).
 
 ### Source code
@@ -84,8 +112,8 @@ It is good practice to use source code versioning systems such as
 [Git](https://git-scm.com/) and often a copy of the code is kept on a
 collaboration platform such as
 [gitlab.com](https://gitlab.com/users/sign_in) or
-[github.com](https://github.com). **Do not just refer to such a
-platform when archiving your code**, as they do not qualify as
+[github.com](https://github.com). <mark>Do not just refer to such a
+platform when archiving your code</mark>, as they do not qualify as
 "archives" and might disappear tomorrow. Instead, create a `zip`- or
 `tar`-archive from the version of the source code used in your work
 and add it to the package.
@@ -121,8 +149,8 @@ all means archive it yourself.
 
 These recommendations might not be workable in full if you used
 proprietary third party software, libraries, languages or
-toolchains. Aim at using exclusively open source software for
-scientific work, since proprietary tools diminish the credibility,
+tool-chains. <mark>Aim at using exclusively open source software for
+scientific work</mark>, since proprietary tools diminish the credibility,
 reproducibility and long-term value of your research.
 
 ### Ancillary information
@@ -202,16 +230,18 @@ that contain scientific metadata.
 of the [bibliographic metadata](#bibliographic-metadata).
 
 + The README should contain a reference to the associated article or
-report (as a DOI if possible), if applicable.
+report (as a [DOI](https://www.doi.org/) if possible), if applicable.
 
 Depending on the size an complexity of the data package, it might be
 useful to describe parts of it in lower-level README-files, perhaps
 located in sub-directories.
 
-This list is likely incomplete. Your guidance should be the imagined
+:::: Note ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+**Note**: This list is likely incomplete. Your guidance should be the imagined
 situation of a researcher who was not involved in the project and who
 should be able to completely understand and make use of the package
 without having to contact you.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 In the case of a *publication data package*, the publication proper
 (article, report) usually contains indispensable scientific
@@ -219,7 +249,7 @@ metadata. Please include a PDF of the final publication, the accepted
 version, the submitted version or a draft manuscript, in that order of
 preference. If your publication is already registered in Lib4RI's
 [DORA](https://dora.lib4ri.ch/eawag), or if it can be accessed through
-a DOI, it is sufficient to include the respective URL as a resource of
+a [DOI](https://www.doi.org/), it is sufficient to include the respective URL as a resource of
 the package, e.g.   
 [https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080](https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080) or   
 [https://doi.org/10.1177/2053019617740365](https://doi.org/10.1177/2053019617740365)
@@ -246,9 +276,9 @@ a pain to process programmatically:
 
 ### File naming schemes
 
-If **a file naming scheme** is employed, it should be descriptive and
+If a file naming scheme is employed, it should be descriptive and
 consistent. Encode attributes of a file as alphanumeric strings
-separated by underscores ( '_' ). Here is a sophisticated naming
+separated by underscores ( `_` ). Here is a sophisticated naming
 convention example from the
 [CMIP5 Model Output Requirements](https://pcmdi.llnl.gov/mips/cmip5/CMIP5_output_metadata_requirements.pdf):
 
@@ -261,13 +291,14 @@ of the filenames. This results for example in this filename:
 
     tas_Amon_HADCM3_ historical_r1i1p1_185001-200512.nc
 
+:::: Warning :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 If mapping your content to such a convention and directory-structure
-becomes too complex, you should consider to employ a proper
-database. In particular, if you feel you spend too much effort in your
+becomes too complex, you should consider to <mark>employ a proper
+database</mark>. In particular, if you feel you spend too much effort in your
 analysis code to construct the paths for the data files, you are in
 the process of implementing a primitive database software by yourself
 and should step back and reconsider.
-
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Folder structure and file-archives
 
@@ -316,8 +347,8 @@ In ERIC (as in most other repository solutions), such a hierarchical
 structure cannot be represented directly. The content of a *data
 package* are *resources*. A *resource* is either a file or a
 URL. There is only one "level" for all resources. The recommended way
-to deal with this situation is to create one or several *archive
-file(s)* which contain individual files along with the the
+to deal with this situation is to create one or several ***archive
+file(s)*** which contain individual files along with the the
 directory-hierarchy and will re-create the latter when unpacked.
 
 The most common type of an *archive file* is a **zip** archive. Other
@@ -330,23 +361,28 @@ root of the directory-tree is `data`:
 `zip -r data.zip data`, or   
 `tar -zcvf data.tgz data`
 
+:::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 **Always upload the README and, if applicable, the manuscript separately.**
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::: Warning :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 **Make sure that there are no spurious, often hidden, files in the
   archive**, which are sometimes added automatically by certain
   operating systems, such as files named `.DS_Store` or `__MACOSX`.
-
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+  
 ### Spitting into multiple *archive files*
 
 It might be prudent to split the directory-tree into multiple
 *archive files*. In general, reasons to do that are related to
 
-a) the size of the data, b) the applicability of the resource-related
+a) the size of the data,
+b) the applicability of the resource-related
 [bibliographic metadata](#bibliographic-metadata), in particular the fields
-*Resource Type*, *License*, and *Citation*, and c) parts of the data
-that should not be compressed.
+*Resource Type*, *License*, and *Citation*, and
+c) parts of the data that should not be compressed.
 
-Examples are:
+**Examples are:**
 
 + One *archive file* would be too large and users might want to just
 use (and download) a part of the data.
@@ -368,20 +404,22 @@ example a sub-folder containing just images. Also, if a folder already
 contains mostly compressed data, e.g. just `JPG` and/or `PNG` files,
 it is advisable to create a non-compressed *archive file* from it, by
 either using `tar` without the `-z` option or `zip` with the option
-`-0`. Note: `zip` allows to switch off compression selectively for
-specific file extensions, e.g.
+`-0`.
 
-        zip -rn .tiff:.gif:.jpg data.zip data
+:::: Note :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+**Note:** `zip` allows to switch off compression selectively for
+specific file extensions, e.g.  
+`zip -rn .tiff:.gif:.jpg data.zip data`    
+will not compress the image files with the given extensions.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-    will not compress the image files with the given extensions.
-
-
+:::: Success :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 For **really large datasets containing large numbers of large files**
 that arise for example in genomics, we provide a command line tool,
-`resup`, to automate packaging, splitting into reasonably sized
-chunks, uploading, and doing everything in reverse for downloading:
-
-[https://github.com/eawag-rdm/resup](https://github.com/eawag-rdm/resup)
+**`resup`**, to automate packaging, splitting into reasonably sized
+chunks, reliable uploading, and doing everything in reverse for downloading:
+[https://github.com/eawag-rdm/resup](https://github.com/eawag-rdm/resup).
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## File formats
 
@@ -418,10 +456,10 @@ The
 is an excellent starting point. Also, feel free to get in touch with
 [rdm@eawag.ch](rdm@eawag.ch) for help.
 
-### The elephant in the room
+### MS Office: The elephant in the room
 
-**Microsoft Office formats** pose a particularly tedious problem
-because they are so prevalent and unreliable and volatile at the same
+Microsoft Office formats pose a particularly tedious problem
+because they are so prevalent but flaky and volatile at the same
 time.
 
 + Never use the "Office 97-2003 formats" `doc` and `xls`. Use `xlsx`
@@ -432,16 +470,21 @@ and `docx` instead, if you have to work with such software.
   document additionally, if you want to make it easy for users of your
   data to edit it.
 
-+ Always prefer plain `csv` to `xlsx`. Saving as `csv` from Microsoft
-  Excel is very unreliable and the result might not represent what you
-  intended. Double-check!. To more reliably and comfortably export
-  Workbooks even containing multiple Worksheets, we provide the tool `xlsxtocsv`:   
-  [https://github.com/eawag-rdm/xlsxtocsv](https://github.com/eawag-rdm/xlsxtocsv)
++ <mark>Always prefer plain `csv` to `xlsx`.</mark>
 
-+ If you want to use MS Excel for data entry and display, please read
++ However, Saving as `csv` from Microsoft Excel is very unreliable and the result might not represent what you
+intended. Double-check!
+
+:::: Success ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+To more reliably and comfortably export Workbooks even containing multiple Worksheets, we provide the tool **`xlsxtocsv`**:   
+[https://github.com/eawag-rdm/xlsxtocsv](https://github.com/eawag-rdm/xlsxtocsv)  
+Double-check anyway!
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
++ If you want to use MS Excel for data entry and display, please <mark>read
   the excellent short article
-  [*Data organization in spreadsheets* (2017)](https://opendata.eawag.ch/static/Data_organization_in_spreadsheets.pdf)
-  by Broman and Wu.
+  [*Data organization in spreadsheets*](https://opendata.eawag.ch/static/Data_organization_in_spreadsheets.pdf)
+  by Broman and Wu (2017)</mark>.
 
 + Some research groups use MS Excel as a versatile research tool that
   integrates data storage (in tables), presentation (through layouting-
@@ -451,6 +494,64 @@ and `docx` instead, if you have to work with such software.
   to archiving your work reproducibly, reliably for the long term. It is just not
   possible. Provide the xlsx-file as is and hope for the best.
 
+:::: Alert :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+**Note:** It is generally a good idea to <mark>avoid spreadsheet software</mark>, in in
+particular Microsoft Excel, in scientific work. The recently well
+publicized corruption of ~20% of papers with supplementary Excel gene
+lists due to Excel - autoconversion
+([Ziemann et al., 2016](https://doi.org/10.1186/s13059-016-1044-7)) is
+just the tip of the iceberg. Other issues are, but not limited to
+
++ 30 year old date type bugs that today interact with cell formatting
+under different language settings in unpreictable ways and differently
+in different versions of Excel (start with [Joel Spolsky's
+entertaining
+anecdote](https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/])).
+
++ well documented bugs in statistical functions, random number
+generation and numerical algorithms, e.g.  "unacceptably bad"
+statistical functions
+([Yalta, 2008](https://doi.org/10.1016/j.csda.2008.03.005))
+([alt. source](https://sci-hub.tw/10.1016/j.csda.2008.03.005)), "it is
+not safe to assume that Microsoft Excel’s statistical procedures give
+the correct answer" and "It is clear that when Microsoft claims to
+have “fixed” a procedure that is known to be in error, Microsoft’s
+claim cannot be safely believed"
+([McCullough and Heise, 2008](https://doi.org/10.1016/j.csda.2008.03.004))
+([alt. source](http://users.df.uba.ar/mricci/F1ByG2013/excel2007.pdf)),
+([alt. source](https://sci-hub.tw//10.1016/j.csda.2008.03.004)), "the
+fact that Microsoft is still marketing a product that contains known
+errors, some of them going back to Excel 4, released in
+1994" ([Mélard, 2014](http://homepages.ulb.ac.be/~gmelard/rech/compsstat37.pdf)),
+([alt. source](https://doi.org/10.1007/s00180-014-0482-5)),
+([alt. source](http://sci-hub.tw/10.1007/s00180-014-0482-5)).
+
++ The initially comfortable mixing of data storage, data presentation,
+  and analysis code into one inextricable and obscure bundle that
+  apparently is the root cause for a
+  [large number of consequential mishaps involving Excel](http://www.eusprig.org/horror-stories.htm)
+  collected by the
+  [The European Spreadsheet Risks Interest Group](http://www.eusprig.org/).
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Open Document Formats (ODF)
+
+The [Open Document Formats (ODF)](https://en.wikipedia.org/wiki/OpenDocument),
+e.g. `odf`, `ods`, `odt`, are slightly better because they follow a
+real standard. However, they are still very complex and adoption is
+low. Therefore we advise to use them only if you can't use the simpler
+alternatives (i.e. `csv` for tabular data and  **and if the software that was employed
+to create the documents in question uses ODF as its default file
+format (e.g. [LibreOffice](https://www.libreoffice.org/)) **.
+
+:::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+<mark>Do not save to ODF formats from Microsoft Office!</mark> MS
+Office's implementation of ODF is flawed and you might end up with
+files that are even less usable than the corresponding MS Office
+formats.
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Bibliographic metadata
 
