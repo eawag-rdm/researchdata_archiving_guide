@@ -34,6 +34,9 @@ summary: |
     Feedback (as [GitHub-Issue](https://github.com/eawag-rdm/researchdata_archiving_guide/issues)
     or via [email](mailto:rdm@eawag.ch)) is greatly appreciated.
     :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+    [Download PDF-version](./eaw_research_data_publishing_guide_pdf.pdf)
+
     
 ...
 
