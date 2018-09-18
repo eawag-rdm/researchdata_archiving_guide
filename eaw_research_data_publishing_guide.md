@@ -112,6 +112,22 @@ on, required interpreters, compilers, libraries and the
 versions used. Take care to provide a reasonable degree of user
 documentation for your software.
 
+For Python code we recommend that you use virtual environments to
+encapsulate dependencies
+([`virtualenv`](https://virtualenv.pypa.io/en/stable/) for Python 2 or
+[`venv`](https://docs.python.org/3/library/venv.html) for Python 3)
+and create installable modules including `setup.py` and
+`requirements.txt`.
+
+For R, there is the dependency management system
+[Packrat](https://rstudio.github.io/packrat/) that serves the same
+purpose.
+
+In general, get acquainted with and use the package/dependency
+management system of your language of choice and start using it to
+allow users of your code a simple installation.
+
+
 #### Version control systems
 
 It is good practice to use source code versioning systems such as
@@ -149,7 +165,9 @@ will [do that](https://cran.r-project.org/src/base/R-3/) most reliably
 for you. However, if you used
 [this R package for extreme value analysis](https://github.com/C2SM/gevXgpd),
 which seems to be only available from a single GitHub repository, by
-all means archive it yourself.
+all means archive it yourself. Also for thrid party-code, make sure
+that all dependencies (including versions) are provided
+explicitely.
 
 #### Proprietary software
 
