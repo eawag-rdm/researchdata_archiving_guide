@@ -68,14 +68,17 @@ package* to refer to the data associated with the publication.
 
 ### Primary data
 
-Strictly speaking, *primary data* is data that is the direct,
+Strictly speaking, *primary data* is data that is digital data that is the direct,
 unmodified result of observations, measurements, surveys, etc. In
-practice however, a modified form of that raw data, e.g. through
+practice however, a modified form of that data, e.g. through
 format conversions or the discarding of irrelevant data, is frequently
 considered *primary data*. As a rule of thumb, *primary data* is data
 for which there exists no previous incarnation that cannot be
 deleted. The researcher, considering conventions in her or his field,
 defines what exactly to archive as *primary data*.
+
+Primary data is often designated under the term *raw data*. But because raw data
+does not have to be digital, we are using the term primary data here.
 
 :::::::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 **Archiving primary data is of the essence.**
@@ -156,7 +159,7 @@ in touch with [rdm@eawag.ch](rdm@eawag.ch).
 
 #### Third party code
 
-should be included in the data package if you can't refer to a copy of
+Similar to third party data, third party code should be included in the data package if you can't refer to a copy of
 exactly the version you used, which is available from a reliable,
 well-established repository committed to long-term preservation. For
 example, you don't have to archive R version 3.4.4 - the
