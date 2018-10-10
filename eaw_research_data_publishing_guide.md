@@ -68,7 +68,7 @@ package* to refer to the data associated with the publication.
 
 ### Primary data
 
-Strictly speaking, *primary data* is data that is digital data that is the direct,
+Strictly speaking, *primary data* is digital data that is the direct,
 unmodified result of observations, measurements, surveys, etc. In
 practice however, a modified form of that data, e.g. through
 format conversions or the discarding of irrelevant data, is frequently
