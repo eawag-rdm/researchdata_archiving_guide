@@ -77,9 +77,6 @@ for which there exists no previous incarnation that cannot be
 deleted. The researcher, considering conventions in her or his field,
 defines what exactly to archive as *primary data*.
 
-Primary data is often designated under the term *raw data*. But because raw data
-does not have to be digital, we are using the term primary data here.
-
 :::::::: Warning ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 **Archiving primary data is of the essence.**
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
