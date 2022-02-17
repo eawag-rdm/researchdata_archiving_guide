@@ -76,7 +76,7 @@ SOFTWARE.
 <div class="Alert">
 <p>Feedback (as <a href="https://github.com/eawag-rdm/researchdata_archiving_guide/issues">GitHub-Issue</a> or via <a href="mailto:rdm@eawag.ch">email</a>) is greatly appreciated.</p>
 </div>
-<a href="./eaw_research_data_publishing_guide_pdf.pdf">Download PDF-version</a>
+<p><a href="./eaw_research_data_publishing_guide_pdf.pdf">Download PDF-version</a></p>
 </div>
 </header>
 <h2 id="introduction">Introduction</h2>
@@ -98,12 +98,12 @@ SOFTWARE.
 <h3 id="source-code">Source code</h3>
 <p>Computer code is often a critical part of the research and necessary to validate or reproduce the work. You should include any code along with relevant information about dependencies, the platform(s) it runs on, required interpreters, compilers, libraries and the versions used. Take care to provide a reasonable degree of user documentation for your software.</p>
 <p>For Python code we recommend that you use virtual environments to encapsulate dependencies (<a href="https://virtualenv.pypa.io/en/stable/"><code>virtualenv</code></a> for Python 2 or <a href="https://docs.python.org/3/library/venv.html"><code>venv</code></a> for Python 3) and create installable modules including <code>setup.py</code> and <code>requirements.txt</code>.</p>
-<p>For R, there is the dependency management system <a href="https://rstudio.github.io/packrat/">Packrat</a> that serves the same purpose.</p>
+<p>For R, there is the dependency management system <a href="https://rstudio.github.io/packrat/">Packrat</a> that serves the same purpose. A more recent package, <a href="https://rstudio.github.io/renv/articles/renv.html">renv</a>, aims to replace Packrat in a robust and stable fashion “with fewer surprises and better default behavior”.</p>
 <p>In general, get acquainted with and use the package/dependency management system of your language of choice and start using it to allow users of your code a simple installation.</p>
 <h4 id="version-control-systems">Version control systems</h4>
 <p>It is good practice to use source code versioning systems such as <a href="https://git-scm.com/">Git</a> and often a copy of the code is kept on a collaboration platform such as <a href="https://gitlab.com/users/sign_in">gitlab.com</a> or <a href="https://github.com">github.com</a>. <mark>Do not just refer to such a platform when archiving your code</mark>, as they do not qualify as “archives” and might disappear tomorrow. Instead, create a <code>zip</code>- or <code>tar</code>-archive from the version of the source code used in your work and add it to the package.</p>
 <h4 id="reproducible-computing">Reproducible computing</h4>
-<p>Taken seriously, providing the software infrastructure for other researchers to reliably run your code in the future can be very difficult for non-trivial codebases and no generally applicable recommendations currently exist. Most proposals involve virtual machines (VMs) or container technologies such as <a href="https://linuxcontainers.org/">LXC/LXD</a>, Docker, <a href="https://coreos.com/rkt/">rkt</a> or <a href="https://www.sylabs.io/">Singularity</a>. <a href="https://www.reprozip.org">ReproZip</a> is a promising tool to collect the dependencies of your code into a container- or VM-format. If you are facing that challenge, please get in touch with <a href="rdm@eawag.ch" class="uri">rdm@eawag.ch</a>.</p>
+<p>Taken seriously, providing the software infrastructure for other researchers to reliably run your code in the future can be very difficult for non-trivial codebases and no generally applicable recommendations currently exist. Most proposals involve virtual machines (VMs) or container technologies such as <a href="https://linuxcontainers.org/">LXC/LXD</a>, Docker, <a href="https://coreos.com/rkt/">rkt</a> or <a href="https://www.sylabs.io/">Singularity</a>. <a href="https://www.reprozip.org">ReproZip</a> is a promising tool to collect the dependencies of your code into a container- or VM-format. If you are facing that challenge, please get in touch with <a href="rdm@eawag.ch">rdm@eawag.ch</a>.</p>
 <h4 id="third-party-code">Third party code</h4>
 <p>Similar to third party data, third party code should be included in the data package if you can’t refer to a copy of exactly the version you used, which is available from a reliable, well-established repository committed to long-term preservation. For example, you don’t have to archive R version 3.4.4 - the <a href="https://cran.r-project.org/index.html">The Comprehensive R Archive Network</a> will <a href="https://cran.r-project.org/src/base/R-3/">do that</a> most reliably for you. However, if you used <a href="https://github.com/C2SM/gevXgpd">this R package for extreme value analysis</a>, which seems to be only available from a single GitHub repository, by all means archive it yourself. Also for thrid party-code, make sure that all dependencies (including versions) are provided explicitely.</p>
 <h4 id="proprietary-software">Proprietary software</h4>
@@ -133,8 +133,8 @@ SOFTWARE.
 <p><strong>Note</strong>: This list is likely incomplete. Your guidance should be the imagined situation of a researcher who was not involved in the project and who should be able to completely understand and make use of the package without having to contact you.</p>
 </div>
 <p>In the case of a <em>publication data package</em>, the publication proper (article, report) usually contains indispensable scientific metadata. Please include a PDF of the final publication, the accepted version, the submitted version or a draft manuscript, in that order of preference. If your publication is already registered in Lib4RI’s <a href="https://dora.lib4ri.ch/eawag">DORA</a>, or if it can be accessed through a <a href="https://www.doi.org/">DOI</a>, it is sufficient to include the respective URL as a resource of the package, e.g.<br />
-<a href="https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080" class="uri">https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080</a> or<br />
-<a href="https://doi.org/10.1177/2053019617740365" class="uri">https://doi.org/10.1177/2053019617740365</a></p>
+<a href="https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080">https://www.dora.lib4ri.ch/eawag/islandora/object/eawag:16080</a> or<br />
+<a href="https://doi.org/10.1177/2053019617740365">https://doi.org/10.1177/2053019617740365</a></p>
 <h2 id="file-naming">File naming</h2>
 <h3 id="general-rules">General rules</h3>
 <p>File- and directory-names should adhere to the following conventions to ensure interoperability across platforms and filesystems and not be a pain to process programmatically:</p>
@@ -231,7 +231,7 @@ don’t use special characters <code>&amp;</code> <code>,</code> <code>*</code> 
 will not compress the image files with the given extensions.</p>
 </div>
 <div class="Success">
-<p>For <strong>really large datasets containing large numbers of large files</strong> that arise for example in genomics, we provide a command line tool, <strong><code>resup</code></strong>, to automate packaging, splitting into reasonably sized chunks, reliable uploading, and doing everything in reverse for downloading: <a href="https://github.com/eawag-rdm/resup" class="uri">https://github.com/eawag-rdm/resup</a>.</p>
+<p>For <strong>really large datasets containing large numbers of large files</strong> that arise for example in genomics, we provide a command line tool, <strong><code>resup</code></strong>, to automate packaging, splitting into reasonably sized chunks, reliable uploading, and doing everything in reverse for downloading: <a href="https://github.com/eawag-rdm/resup">https://github.com/eawag-rdm/resup</a>.</p>
 </div>
 <h2 id="file-formats">File formats</h2>
 <p>Try to use reliable, well-documented and universally readable file-formats. Because of the extremely large and constantly growing number of file formats, no conclusive lists of acceptable formats can be given.</p>
@@ -246,7 +246,7 @@ will not compress the image files with the given extensions.</p>
 <li><p>If your original data comes in a “low-quality” format (e.g. MP3, GIF, …) just keep it like that, a conversion will not improve the quality.</p></li>
 </ul>
 <h3 id="more-detailed-recommendations">More detailed recommendations</h3>
-<p>The <a href="http://www.loc.gov/preservation/resources/rfs/TOC.html">Library of Congress Recommended Formats Statement</a> is an excellent starting point. Also, feel free to get in touch with <a href="rdm@eawag.ch" class="uri">rdm@eawag.ch</a> for help.</p>
+<p>The <a href="http://www.loc.gov/preservation/resources/rfs/TOC.html">Library of Congress Recommended Formats Statement</a> is an excellent starting point. Also, feel free to get in touch with <a href="rdm@eawag.ch">rdm@eawag.ch</a> for help.</p>
 <h3 id="ms-office-the-elephant-in-the-room">MS Office: The elephant in the room</h3>
 <p>Microsoft Office formats pose a particularly tedious problem because they are so prevalent but flaky and volatile at the same time.</p>
 <ul>
@@ -257,7 +257,7 @@ will not compress the image files with the given extensions.</p>
 </ul>
 <div class="Success">
 <p>To more reliably and comfortably export Workbooks even containing multiple Worksheets, we provide the tool <strong><code>xlsxtocsv</code></strong>:<br />
-<a href="https://github.com/eawag-rdm/xlsxtocsv" class="uri">https://github.com/eawag-rdm/xlsxtocsv</a><br />
+<a href="https://github.com/eawag-rdm/xlsxtocsv">https://github.com/eawag-rdm/xlsxtocsv</a><br />
 Double-check anyway!</p>
 </div>
 <ul>
@@ -268,12 +268,12 @@ Double-check anyway!</p>
 <p><strong>Note:</strong> It is generally a good idea to <mark>avoid spreadsheet software</mark>, in in particular Microsoft Excel, in scientific work. The recently well publicized corruption of ~20% of papers with supplementary Excel gene lists due to Excel - autoconversion (<a href="https://doi.org/10.1186/s13059-016-1044-7">Ziemann et al., 2016</a>) is just the tip of the iceberg. Other issues are, but not limited to</p>
 <ul>
 <li><p>30 year old date type bugs that today interact with cell formatting under different language settings in unpreictable ways and differently in different versions of Excel (start with <a href="https://www.joelonsoftware.com/2006/06/16/my-first-billg-review/">Joel Spolsky’s entertaining anecdote</a>).</p></li>
-<li><p>well documented bugs in statistical functions, random number generation and numerical algorithms, e.g. “unacceptably bad” statistical functions (<a href="https://doi.org/10.1016/j.csda.2008.03.005">Yalta, 2008</a>) (<a href="https://sci-hub.tw/10.1016/j.csda.2008.03.005">alt. source</a>), “it is not safe to assume that Microsoft Excel’s statistical procedures give the correct answer” and “It is clear that when Microsoft claims to have “fixed” a procedure that is known to be in error, Microsoft’s claim cannot be safely believed&quot; (<a href="https://doi.org/10.1016/j.csda.2008.03.004">McCullough and Heise, 2008</a>) (<a href="http://users.df.uba.ar/mricci/F1ByG2013/excel2007.pdf">alt. source</a>), (<a href="https://sci-hub.tw//10.1016/j.csda.2008.03.004">alt. source</a>), “the fact that Microsoft is still marketing a product that contains known errors, some of them going back to Excel 4, released in 1994” (<a href="http://homepages.ulb.ac.be/~gmelard/rech/compsstat37.pdf">Mélard, 2014</a>), (<a href="https://doi.org/10.1007/s00180-014-0482-5">alt. source</a>), (<a href="http://sci-hub.tw/10.1007/s00180-014-0482-5">alt. source</a>).</p></li>
+<li><p>well documented bugs in statistical functions, random number generation and numerical algorithms, e.g. “unacceptably bad” statistical functions (<a href="https://doi.org/10.1016/j.csda.2008.03.005">Yalta, 2008</a>) (<a href="https://sci-hub.tw/10.1016/j.csda.2008.03.005">alt. source</a>), “it is not safe to assume that Microsoft Excel’s statistical procedures give the correct answer” and “It is clear that when Microsoft claims to have “fixed” a procedure that is known to be in error, Microsoft’s claim cannot be safely believed" (<a href="https://doi.org/10.1016/j.csda.2008.03.004">McCullough and Heise, 2008</a>) (<a href="http://users.df.uba.ar/mricci/F1ByG2013/excel2007.pdf">alt. source</a>), (<a href="https://sci-hub.tw//10.1016/j.csda.2008.03.004">alt. source</a>), “the fact that Microsoft is still marketing a product that contains known errors, some of them going back to Excel 4, released in 1994” (<a href="http://homepages.ulb.ac.be/~gmelard/rech/compsstat37.pdf">Mélard, 2014</a>), (<a href="https://doi.org/10.1007/s00180-014-0482-5">alt. source</a>), (<a href="http://sci-hub.tw/10.1007/s00180-014-0482-5">alt. source</a>).</p></li>
 <li><p>The initially comfortable mixing of data storage, data presentation, and analysis code into one inextricable and obscure bundle that apparently is the root cause for a <a href="http://www.eusprig.org/horror-stories.htm">large number of consequential mishaps involving Excel</a> collected by the <a href="http://www.eusprig.org/">The European Spreadsheet Risks Interest Group</a>.</p></li>
 </ul>
 </div>
 <h3 id="open-document-formats-odf">Open Document Formats (ODF)</h3>
-<p>The <a href="https://en.wikipedia.org/wiki/OpenDocument">Open Document Formats (ODF)</a>, e.g. <code>odf</code>, <code>ods</code>, <code>odt</code>, are slightly better because they follow a real standard. However, they are still very complex and adoption is low. Therefore we advise to use them only if you can’t use the simpler alternatives (i.e. <code>csv</code> for tabular data and <strong>and if the software that was employed to create the documents in question uses ODF as its default file format (e.g. <a href="https://www.libreoffice.org/">LibreOffice</a>) </strong>.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/OpenDocument">Open Document Formats (ODF)</a>, e.g. <code>odf</code>, <code>ods</code>, <code>odt</code>, are slightly better because they follow a real standard. However, they are still very complex and adoption is low. Therefore we advise to use them only if you can’t use the simpler alternatives (i.e. <code>csv</code> for tabular data and <strong>and if the software that was employed to create the documents in question uses ODF as its default file format (e.g. <a href="https://www.libreoffice.org/">LibreOffice</a>) </strong>.</p>
 <div class="Warning">
 <p><mark>Do not save to ODF formats from Microsoft Office!</mark> MS Office’s implementation of ODF is flawed and you might end up with files that are even less usable than the corresponding MS Office formats.</p>
 </div>

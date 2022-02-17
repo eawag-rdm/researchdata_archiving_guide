@@ -121,7 +121,10 @@ and create installable modules including `setup.py` and
 
 For R, there is the dependency management system
 [Packrat](https://rstudio.github.io/packrat/) that serves the same
-purpose.
+purpose. A more recent package,
+[renv](https://rstudio.github.io/renv/articles/renv.html), aims to
+replace Packrat in a robust and stable fashion "with fewer surprises
+and better default behavior".
 
 In general, get acquainted with and use the package/dependency
 management system of your language of choice and start using it to
